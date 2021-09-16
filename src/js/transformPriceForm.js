@@ -1,4 +1,4 @@
-export const transformPriceForm = (num, str = "원") => {
+export const transformPriceForm = (num, str = "") => {
   // return num.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
   return num.toLocaleString("ko-KR") + str;
 };
