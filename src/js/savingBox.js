@@ -57,7 +57,7 @@ const createSavingBox = () => {
           }>${crName.value}</span>
           <span ${
             getTextColorByBackgroundColor(crColor.value) && "class='white'"
-          }>${transformPriceForm(Number(crPrice.value))}</span>
+          }>${transformPriceForm(Number(crPrice.value), "원")}</span>
         </div>
       </div>
     </li>
