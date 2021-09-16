@@ -78,7 +78,7 @@
 <hr>
 <br>
 
-### 날짜별 종합 입출력 결과 및 리스트 출력
+### 메인 페이지 스와이퍼
 
 <img src='https://images.velog.io/images/ahngh/post/512dc64f-fa10-461b-b3ba-3260a70c0d20/swiper.gif' width="200px">
 
@@ -88,7 +88,7 @@
 <hr>
 <br>
 
-### 아이콘 클릭 시 매니저 페이지 이동
+### 아이콘 클릭 시 매니저 페이지 이동 & chart로 데이터 표현
 
 <img src='https://images.velog.io/images/ahngh/post/a24c54fd-615e-4edf-9f92-2b48753d3306/manage-page.gif' width="200px">
 
