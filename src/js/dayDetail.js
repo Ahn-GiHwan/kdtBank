@@ -57,8 +57,6 @@ export const setDayDetail = (data) => {
     return acc;
   }, []);
 
-  console.log(totalPriceByDay);
-
   totalPriceByDay.forEach((item) => {
     writeDay(item, filterDate);
   });
