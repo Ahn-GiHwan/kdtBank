@@ -1,10 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="description" content="kdt bank" />
+
+    <!-- Script -->
+    <script src="./src/js/index.js" defer></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <!-- Title -->
+    <title>KDTBank</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.png" />
   </head>
-  <body> </body>
+  <body>
+    <div class="app">
+      <div class="statusbar">
+        <div class="inner">
+          <img src="./src/img/time.png" alt="time" class="time icon" />
+          <div class="info_icons">
+            <img
+              src="./src/img/cellular.png"
+              alt="cellular"
+              class="cellular icon"
+            />
+            <img src="./src/img/wifi.png" alt="wifi" class="wifi icon" />
+            <img
+              src="./src/img/battery.png"
+              alt="battery"
+              class="battery icon"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="main-page">
+        <header>
+          <div class="inner">
+            <img src="./src/img/avatar.png" alt="avatar" class="avatar icon" />
+            <h1 class="title">생활비</h1>
+            <div class="header-right">
+              <img src="./src/img/pay.png" alt="pay" class="pay icon" />
+              <img
+                src="./src/img/search.png"
+                alt="search"
+                class="search icon"
+              />
+            </div>
+          </div>
+        </header>
+        <main>
+          <section class="total">
+            <div class="card">
+              <div class="top">
+                <span class="empty">여백</span>
+                <span class="account-number">155-02635-2927</span>
+                <button class="transfer btn">이체</button>
+              </div>
+              <div class="middle">
+                <div class="totalPrice">
+                  <span class="price">
+                    <span class="amount">0</span><span class="unit">원</span>
+                  </span>
+                </div>
+              </div>
+              <div class="bottom">
+                <span class="empty">여백</span>
+                <div class="slider">
+                  <label for="main_limit">
+                    <input
+                      type="range"
+                      class="range"
+                      id="main_limit"
+                      value="70"
+                    />
+                  </label>
+                </div>
+                <button class="chart btn">
+                  <img
+                    src="./src/img/graph.png"
+                    alt="graph"
+                    class="opengraph icon"
+                  />
+                </button>
+              </div>
+              <footer></footer>
+            </div>
+            <aside class="ad">
+              <span> 지금 낮은 이자로 생활대출을 신청! Go </span>
+            </aside>
+          </section>
+          <section class="details">
+            <div class="inner">
+              <button class="bar btn">
+                <img src="./src/img/bar.png" alt="bar" class="bar icon" />
+              </button>
+              <div class="savingBox">
+                <div class="saving inner">
+                  <ul> </ul>
+                  <div class="plusBox">
+                    <img
+                      src="./src/img/plus.png"
+                      alt="plus"
+                      class="plus icon"
+                    />
+                    <span class="plus_content">저금통 만들기</span>
+                  </div>
+                </div>
+              </div>
+              <div class="days">
+                <div class="inner"></div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="manage-page off">
+        <header>
+          <div class="inner">
+            <h2 class="page-title">지출 관리</h2>
+          </div>
+        </header>
+        <main>
+          <div class="inner">
+            <section class="standard">
+              <div class="info">
+                <h3 class="title">기준금액설정</h3>
+                <div class="price">2,100,000원</div>
+              </div>
+              <div class="slider">
+                <label for="manage_limit">
+                  <input type="range" value="70" id="manage_limit" />
+                </label>
+              </div>
+            </section>
+            <section class="daily-report">
+              <h3 class="title">일간 리포트</h3>
+              <div class="bargraph">
+                <canvas id="barchart"></canvas>
+              </div>
+            </section>
+            <section class="month-pattern">
+              <h3 class="title">9월 지출 패턴</h3>
+              <div class="piegraph">
+                <canvas id="piechart"></canvas>
+                <div class="totalPrice">
+                  <span class="price">
+                    <span class="sumAmount">1,736,500</span
+                    ><span class="unit">원</span>
+                  </span>
+                </div>
+              </div>
+              <ul class="infoByCategory"> </ul>
+            </section>
+          </div>
+        </main>
+        <button class="close btn">닫기</button>
+      </div>
+      <!-- footer -->
+      <nav>
+        <ul>
+          <li><img src="./src/img/home.png" alt="home" class="home icon" /></li>
+          <li
+            ><img src="./src/img/change.png" alt="change" class="change"
+          /></li>
+          <li><img src="./src/img/talk.png" alt="talk" class="talk" /></li>
+          <li
+            ><img src="./src/img/setting.png" alt="setting" class="setting"
+          /></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="modal">
+      <div class="box">
+        <span class="title">저금통 만들기</span>
+        <div class="inputBox">
+          <span>저금통 이름</span>
+          <label for="saving_name">
+            <input
+              type="text"
+              class="saving_name"
+              id="saving_name"
+              placeholder="아이맥 사기"
+            />
+          </label>
+        </div>
+        <div class="inputBox">
+          <span>가격</span>
+          <label for="saving_price">
+            <input
+              type="number"
+              class="saving_price"
+              id="saving_price"
+              placeholder="100000"
+            />
+          </label>
+        </div>
+        <div class="inputBox">
+          <span>색상</span>
+          <label for="saving_color">
+            <input type="color" class="saving_color" id="saving_color" />
+          </label>
+        </div>
+        <button class="create btn">만들기</button>
+        <button class="exit btn">X</button>
+      </div>
+    </div>
+  </body>
 </html>
