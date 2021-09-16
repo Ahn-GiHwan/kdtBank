@@ -21,18 +21,22 @@ import setSavingBox, { clear } from "./savingBox";
 // Ajax
 import sendDate from "./getData";
 
+// import Swiper from "swiper/swiper-bundle";
+import Swiper from "swiper/swiper-bundle";
+
+import "swiper/swiper-bundle.min.css";
+
 const barChart = document.querySelector("#barchart");
 const pieChart = document.querySelector("#piechart");
 
 const statusbar = document.querySelector(".statusbar");
-const mainPage = document.querySelector(".main-page");
 const managePage = document.querySelector(".manage-page");
 
 const total = document.querySelector(".total");
 const details = document.querySelector(".details");
 
 const modal = document.querySelector(".modal");
-
+const swiper = document.querySelector(".swiper");
 const URL = `https://syoon0624.github.io/json/test.json`;
 
 const ajax = new XMLHttpRequest();
@@ -47,9 +51,10 @@ window.addEventListener("click", (e) => {
 
   // manage-page controll
   if (elClassName.includes("close") || elClassName.includes("opengraph")) {
-    mainPage.classList.toggle("off");
+    // mainPage.classList.toggle("off");
     managePage.classList.toggle("off");
     statusbar.classList.toggle("open");
+    swiper.classList.toggle("off");
   }
 
   // io list size controll
@@ -136,4 +141,5 @@ window.addEventListener("load", () => {
 
   new Chart(barChart, barConfig(expenditureInfoDays));
   new Chart(pieChart, pieConfig(categoryInfoData));
+  new Swiper(".swiper", {});
 });
