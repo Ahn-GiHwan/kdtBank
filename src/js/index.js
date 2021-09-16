@@ -141,5 +141,18 @@ window.addEventListener("load", () => {
 
   new Chart(barChart, barConfig(expenditureInfoDays));
   new Chart(pieChart, pieConfig(categoryInfoData));
-  new Swiper(".swiper", {});
+  new Swiper(".swiper", {
+    grabCursor: true,
+    threshold: 100,
+    edgeSwipeThreshold: 20,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        translate: ["-20%", 0, -1],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+  });
 });
