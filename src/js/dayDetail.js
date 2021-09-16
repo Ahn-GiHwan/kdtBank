@@ -40,7 +40,7 @@ export const setDayDetail = (data) => {
     return income === "in" ? (acc += price) : (acc -= price);
   }, 0);
 
-  amount.innerHTML = transformPriceForm(currentAmount, "");
+  amount.innerHTML = transformPriceForm(currentAmount);
 
   const totalPriceByDay = filterDate.reduce((acc, cur) => {
     const date = cur.date;
@@ -49,9 +49,10 @@ export const setDayDetail = (data) => {
     const idx = acc.findIndex((item) => item.date === date);
     if (idx === -1) {
       if (income === "out") acc.push({ date, price });
-      else acc.push({ date, price: 0 });
+      else acc.push({ date, price: -price });
     } else {
       if (income === "out") acc[idx].price += price;
+      else acc[idx].price -= price;
     }
     return acc;
   }, []);
@@ -87,7 +88,18 @@ const writeDay = (dayInfo, filterDate) => {
     <div class="day">
       <div class="day-title">
         <h2>${customDate}</h2>
-        <div class="amount">${transformPriceForm(price)} 지출</div>
+        ${
+          price < 0
+            ? `<div class="amount">${transformPriceForm(
+                Math.abs(price),
+                "원"
+              )} 수입</div>`
+            : `<div class="amount">${transformPriceForm(
+                price,
+                "원"
+              )} 지출</div>`
+        }
+        
       </div>
       <ol class="spendings"></ol>
     </div>
@@ -108,13 +120,9 @@ const writeDetail = (detail) => {
       ${
         detail.income === "in"
           ? `<p class="amount in">${transformPriceForm(
-              Number(detail.price),
-              ""
+              Number(detail.price)
             )}</p>`
-          : `<p class="amount">${transformPriceForm(
-              Number(detail.price),
-              ""
-            )}</p>`
+          : `<p class="amount">${transformPriceForm(Number(detail.price))}</p>`
       }
     </li>
   `;

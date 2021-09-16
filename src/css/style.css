@@ -17,6 +17,20 @@
   --range-margin-top: -11px;
 }
 
+/* swiper */
+
+.swiper {
+  height: 100vh;
+}
+.test {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  bottom: 58px;
+  left: 0;
+  background-color: var(--color-bg);
+}
+
 /* common */
 
 @font-face {
@@ -190,7 +204,7 @@ input[type="range"]::-ms-fill-upper {
 /* main page */
 
 .main-page {
-  position: fixed;
+  position: absolute;
   top: 44px;
   right: 0;
   bottom: 58px;
@@ -335,6 +349,10 @@ main.open {
   width: 100%;
 }
 
+.total .ad {
+  font-size: 14px;
+}
+
 .details {
   background-color: white;
   border-top-left-radius: 30px;
@@ -442,27 +460,6 @@ main.open {
   font-size: 12px;
   color: var(--colore-orange);
   cursor: pointer;
-
-  /* animation */
-  background-image: linear-gradient(90deg, #000 50%, transparent 0),
-    linear-gradient(90deg, #000 50%, transparent 0),
-    linear-gradient(180deg, #000 50%, transparent 0),
-    linear-gradient(180deg, #000 50%, transparent 0);
-  background-position: 0 0, 0 100%, 0 0, 100% 0;
-  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
-  animation: 0.7s infinite normal a;
-  animation-timing-function: linear;
-  animation-play-state: running;
-}
-
-@keyframes a {
-  0% {
-    background-position: 0 0, 0 100%, 0 0, 100% 0;
-  }
-  100% {
-    background-position: 30px 0, -30px 100%, 0 -30px, 100% 30px;
-  }
 }
 
 .details .plusBox .plus_content {
