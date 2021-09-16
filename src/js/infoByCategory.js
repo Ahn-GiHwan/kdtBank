@@ -45,7 +45,7 @@ const writeInfoByCategory = (name, price) => {
         />
         <p class="category">${categoryKo(name)}</p>
       </div>
-      <p class="amount">${transformPriceForm(price)}</p>
+      <p class="amount">${transformPriceForm(price, "원")}</p>
     </li>`;
 };
 
