@@ -21,7 +21,7 @@ import setSavingBox, { clear } from "./savingBox";
 // Ajax
 import sendDate from "./getData";
 
-// import Swiper from "swiper/swiper-bundle";
+// swiper
 import Swiper from "swiper/swiper-bundle";
 
 import "swiper/swiper-bundle.min.css";
@@ -142,7 +142,6 @@ window.addEventListener("load", () => {
   new Chart(barChart, barConfig(expenditureInfoDays));
   new Chart(pieChart, pieConfig(categoryInfoData));
   new Swiper(".swiper", {
-    grabCursor: true,
     threshold: 100,
     edgeSwipeThreshold: 20,
     effect: "creative",
