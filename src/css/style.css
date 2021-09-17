@@ -21,14 +21,7 @@
 
 .swiper {
   height: 100vh;
-}
-.test {
-  position: absolute;
-  top: 44px;
-  right: 0;
-  bottom: 58px;
-  left: 0;
-  background-color: var(--color-bg);
+  /* cursor: wait; */
 }
 
 /* common */
@@ -583,7 +576,7 @@ main.open {
   right: 23px;
 }
 
-.manage-page main {
+.manage-page .main {
   position: absolute;
   top: 65px;
   left: 0;
@@ -594,7 +587,7 @@ main.open {
   scrollbar-width: none; /* Firefox */
 }
 
-.manage-page main::-webkit-scrollbar {
+.manage-page .main::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
 
@@ -723,7 +716,7 @@ main.open {
 
 /* footer */
 nav {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
