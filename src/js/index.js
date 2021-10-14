@@ -8,18 +8,18 @@ import "reset-css";
 import "../css/style.css";
 
 // chart config
-import barConfig from "./barChart";
-import pieConfig from "./pieChart";
+import barConfig from "./chart/barChart";
+import pieConfig from "./chart/pieChart";
 
 // view render
-import setInfoByCategory from "./infoByCategory";
-import setDayDetail from "./dayDetail";
+import setInfoByCategory from "./view/infoByCategory";
+import setDayDetail from "./view/dayDetail";
 
 // modal render & controll
-import setSavingBox, { clear } from "./savingBox";
+import setSavingBox, { clear } from "./view/savingBox";
 
 // Ajax
-import sendDate from "./getData";
+import sendDate from "./function/getData";
 
 // swiper
 import Swiper from "swiper/swiper-bundle";

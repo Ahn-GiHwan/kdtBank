@@ -1,4 +1,4 @@
-import transformPriceForm from "./transformPriceForm";
+import transformPriceForm from "../function/transformPriceForm";
 
 const days = document.querySelector(".days");
 const daysInner = days.children[0];

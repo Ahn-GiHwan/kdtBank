@@ -1,4 +1,4 @@
-import transformPriceForm from "./transformPriceForm";
+import transformPriceForm from "../function/transformPriceForm";
 const infoByCategory = document.querySelector(".infoByCategory");
 const sumAmount = document.querySelector(".sumAmount");
 

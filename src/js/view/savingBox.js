@@ -1,4 +1,4 @@
-import transformPriceForm from "./transformPriceForm";
+import transformPriceForm from "../function/transformPriceForm";
 import swal from "sweetalert";
 
 const crName = document.querySelector(".saving_name");
