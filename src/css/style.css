@@ -26,12 +26,6 @@
 
 /* common */
 
-@font-face {
-  src: url("../../assets/KakaoOTFRegular.otf");
-
-  font-family: "kakao";
-}
-
 body,
 input,
 button {

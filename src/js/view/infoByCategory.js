@@ -1,4 +1,5 @@
 import transformPriceForm from "../function/transformPriceForm";
+
 const infoByCategory = document.querySelector(".infoByCategory");
 const sumAmount = document.querySelector(".sumAmount");
 
@@ -39,7 +40,7 @@ const writeInfoByCategory = (name, price) => {
   return `<li>
       <div class="categorys">
         <img
-          src="../../assets/${name}.png"
+          src="./img/${name}.png"
           alt="${name}"
           class="${name} icon"
         />

@@ -19,12 +19,12 @@ import setDayDetail from "./view/dayDetail";
 import setSavingBox, { clear } from "./view/savingBox";
 
 // Ajax
-import sendDate from "./function/getData";
+import fetchData from "./function/fetchData";
 
 // swiper
-import Swiper from "swiper/swiper-bundle";
+import Swiper from "swiper";
 
-import "swiper/swiper-bundle.min.css";
+import "swiper/css";
 
 const barChart = document.querySelector("#barchart");
 const pieChart = document.querySelector("#piechart");
@@ -95,13 +95,8 @@ window.addEventListener("keyup", (e) => {
   }
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-  sendDate(ajax, URL);
-  ajax.onload = () => {
-    if (ajax.status === 200)
-      state.data = [...JSON.parse(ajax.response).bankList];
-    else console.error(ajax.response);
-  };
+window.addEventListener("DOMContentLoaded", async () => {
+  fetchData(URL).then((res) => (state.data = [...res.bankList]));
 });
 
 window.addEventListener("load", () => {
