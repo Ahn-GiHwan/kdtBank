@@ -22,7 +22,7 @@ const formatDate = (today) => {
 
 export const setDayDetail = (data) => {
   if (data.length === 0)
-    return (daysInner.innerHTML = `<div class="reloadBox"><span class="reload text">새로고침</span> <img src="../../assets/reload.png" alt="reload" class="reload icon" /></div>`);
+    return (daysInner.innerHTML = `<div class="reloadBox"><span class="reload text">새로고침</span> <img src="./img/reload.png" alt="reload" class="reload icon" /></div>`);
   const filterDate = data
     .filter((item) => {
       const changeDate = item.date.split("-").join("");
