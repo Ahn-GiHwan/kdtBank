@@ -1,6 +1,7 @@
-export const sendDate = (ajax, URL) => {
-  ajax.open("GET", URL);
-  ajax.send();
-};
+export async function fetchData(url) {
+  const res = await fetch(url);
+  const data = await res.json();
+  return data;
+}
 
-export default sendDate;
+export default fetchData;
