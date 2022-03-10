@@ -25,8 +25,7 @@
 
 | 이름                            | 내용                                         |
 | ------------------------------- | -------------------------------------------- |
-| parcel                          | 번들러                                       |
-| parcel-plugin-static-files-copy | 번들되지 않는 정적인 폴더(파일들) 설정       |
+| webpack                          | 번들러                                       |
 | reset-css                       | default된 css를 reset시켜주는 css            |
 | chart.js                        | Bar & Doughnut 차트를 만들 때 사용한 library |
 | sweetalert                      | alert창을 이쁘게 꾸며주는 library            |
